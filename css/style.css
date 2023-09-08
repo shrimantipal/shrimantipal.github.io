@@ -648,7 +648,9 @@ section {
     padding:2rem 9%;
 }
 
-
+.footer-links {
+    display:none;
+}
 
 /* .contact {
     min-height:auto;
@@ -745,10 +747,11 @@ section {
 
     .home-content h1 {
         margin-top:12rem;
+        padding-top:3rem;
         
     }
     .btn-box {
-        margin-bottom:18rem;
+        margin-bottom:20rem;
         width:28rem;
     }
 
@@ -762,16 +765,7 @@ section {
         width:15rem;
         height:70%;
     }
-    .home-sci {
-        height:55px;
-        margin-left:1.5rem;
-        align-items:center;
-
-    }
-    .home-sci a {
-        margin-right:10px;
-    }
-
+    
 }
 
 @media (max-width:991px) {
@@ -779,7 +773,9 @@ section {
         width:90%;
         margin-left:1rem;
     }
-    
+    .home-sci {
+        display:none;
+    }
 
     .header {
         padding: 2rem 4%;
@@ -819,6 +815,20 @@ section {
         padding:6rem;
     }
 
+    .footer-links {
+        display:flex;
+        margin-top:1rem;
+        margin-bottom:1rem;
+        justify-content:center;
+    }
+    
+    .footer-links a {
+        text-align:center;
+        padding-left:1rem;
+        font-size:2.5rem;
+        padding-right:1rem;
+    }
+
     
     #menu-icon {
         display:block;
@@ -856,15 +866,7 @@ section {
         flex-direction:column;
     }
 
-    .home-sci {
-        width: 160px;
-    }
-
-    .home-sci a {
-
-        width:80%;
-        height:80%;
-    }
+    
 
 
 }
@@ -900,18 +902,27 @@ section {
 
 @media (max-width:282px) {
     
-    .html {
-        font-size:40%;
+    .projects-layer h4 {
+        font-size:1rem;
+        line-height:1rem;
     }
+    
+    .projects-layer p {
+        font-size:0.5rem;
+        line-height:0.5rem;
+    }
+
     .home-content {
         display:flex;
         align-items:center;
+        font-size:80%;
         flex-direction:column;
         text-align:center;
     }
     .home-content h1 {
-        font-size:2rem;
+        font-size:3rem;
     }
+
 }
 
 @keyframes aboutSpinner {
