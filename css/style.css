@@ -223,7 +223,7 @@ section {
     height:50px;
     background: linear-gradient(black, black) padding-box, linear-gradient(to right, var(--second-color), var(--main-color)) border-box;
     border: 2px solid transparent;
-    border-radius:100%;
+    border-radius:50%;
     font-size:25px;
     color:var(--main-color);
 }
@@ -742,6 +742,29 @@ section {
     .projects-layer p {
         font-size:50%;
     }
+    .btn-box {
+        margin-bottom:15rem;
+        width:28rem;
+    }
+
+    .btn-box .btn {
+        font-size:1.3rem;
+        width:12rem;
+        height:70%;
+    }
+    .btn-box .btn2 {
+        font-size:1.3rem;
+        width:15rem;
+        height:70%;
+    }
+    .home-sci {
+        height:55px;
+        align-items:center;
+
+    }
+    .home-sci a {
+        margin-right:10px;
+    }
 
 }
 
@@ -750,15 +773,7 @@ section {
         width:90%;
         margin-left:1rem;
     }
-    .home-sci {
-        margin-left:3rem;
-        width:200px;
-    }
-    .home-sci a {
-        padding-top:5rem;
-        width:38px;
-        height:38px;
-    }
+
     .header {
         padding: 2rem 4%;
     }
@@ -890,7 +905,7 @@ section {
         text-align:center;
     }
     .home-content h1 {
-        font-size:3rem;
+        font-size:2rem;
     }
 }
 
