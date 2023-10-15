@@ -13,31 +13,35 @@
     <div id="viz"> </div>
         <script>
             var vlSpec = {
-                          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-                          "data": {"url": "https://uiuc-ischool-dataviz.github.io/fall2023-acg-acu/data/building_inventory.csv"},
-                          "hconcat": [
-                            {
-                              "layer": [
+                              "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                              "data": {
+                                "url": "https://uiuc-ischool-dataviz.github.io/fall2023-acg-acu/data/building_inventory.csv"
+                              },
+                              "hconcat": [
                                 {
-                                  "mark": {"type": "point", "cornerRadius": 10},
+                                  "layer": [
+                                    {
+                                      "mark": {"type": "bar", "cornerRadius": 10},
+                                      "params": [{"name": "myfirstparam", "select": "interval"}],
+                                      "encoding": {
+                                        "x": {"field": "Congress Dist", "type": "quantitative"},
+                                        "y": {"aggregate": "sum", "field": "Square Footage"},
+                                        "color": {"value": "grey", "condition": {"param": "myfirstparam"}}
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "mark": {"type": "point", "shape":"diamond"},
+                                  "params": [{"name": "mysecondparam", "select": "interval"}],
                                   "encoding": {
-                                    "x": {"field": "Total Floors", "type": "quantitative"},
-                                    "y": {"aggregate": "sum", "field": "Square Footage"},
-                                    "color": {"value": "grey"}
+                                    "x": {"field": "Year Acquired", "type": "quantitative"},
+                                    "y": {"field": "Year Constructed", "type": "quantitative"},
+                                    "color": {"value": "blue", "condition": {"param": "mysecondparam"}}
                                   }
                                 }
                               ]
-                            },
-                            {
-                              "mark": {"type": "point", "shape": "diamond"},
-                              "encoding": {
-                                "x": {"field": "Year Acquired", "type": "quantitative"},
-                                "y": {"field": "Year Constructed", "type": "quantitative"},
-                                "color": {"value": "blue"}
-                              }
-                            }
-                          ]
-                        };
+                            };
               vegaEmbed("#viz",vlSpec);
         </script>
    
