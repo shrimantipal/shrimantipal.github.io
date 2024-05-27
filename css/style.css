@@ -209,7 +209,9 @@ section {
 .home-sci {
     position:absolute;
     bottom:6rem;
+    right:6rem;
     width:200px;
+    padding-top:10rem;
     display:flex;
     justify-content: space-between;
 }
